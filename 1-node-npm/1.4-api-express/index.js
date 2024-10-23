@@ -10,11 +10,15 @@ const songs = [
     {id: 4, name: "Marvins Room", artist: 'Drake', year: 2017},
 ];
 
+// /regresar un saludo en html
+app.get('/', (req,res)=>{
+    res.send('Hola devf!');
+});
 
 
 // /songs: lista canciones
 //url - endpoint getSongs
-app.get('/', (req, res) =>{
+app.get('/songs', (req, res) =>{
     res.json(songs);
 });
 
